@@ -20,7 +20,7 @@ class TwitterSearch extends React.Component{
             if(e.substring(0,1) === '#'){
                 topThis.setState({options:[], isHashTag: true, hashTag: e});
             }else{
-                axios.get(`/users?q=${e}`)
+                axios.get(`https://newsafar.herokuapp.com/users?q=${e}`)
                 .then(res=>{
                     topThis.setState({options: res.data});
                 })

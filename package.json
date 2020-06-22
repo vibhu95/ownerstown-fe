@@ -10,7 +10,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://newsafar.herokuapp.com",
   "keywords": [
     "twitter",
     "twitter api",

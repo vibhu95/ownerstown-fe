@@ -21,7 +21,7 @@ class Tweets extends React.Component{
         const query = this.state.isHashTag ? this.state.hashTag : this.state.user && this.state.user.length > 0 ? `from:${this.state.user[0].screenName}` : null;
         console.log('query ::: ',query);
         if(query){
-            const url = `/tweets?q=${encodeURIComponent(query)}`;
+            const url = `https://newsafar.herokuapp.com/tweets?q=${encodeURIComponent(query)}`;
             axios.get(url).then(res=>{
                 console.log(res.data);
                 this.setState({tweets: res.data.statuses, loading: false});
@@ -35,7 +35,7 @@ class Tweets extends React.Component{
         const query = this.state.isHashTag ? this.state.hashTag : this.state.user && this.state.user.length > 0 ? `from:${this.state.user[0].screenName}` : null;
         console.log('query ::: ',query);
         if(query){
-            const url = `/tweets?q=${encodeURIComponent(query)}`;
+            const url = `https://newsafar.herokuapp.com/tweets?q=${encodeURIComponent(query)}`;
             axios.get(url).then(res=>{
                 console.log(res.data);
                 this.setState({tweets: res.data.statuses, loading: false});
@@ -51,7 +51,7 @@ class Tweets extends React.Component{
             if(e.substring(0,1) === '#'){
                 topThis.setState({options:[], isHashTag: true, hashTag: e});
             }else{
-                axios.get(`/users?q=${e}`)
+                axios.get(`https://newsafar.herokuapp.com/users?q=${e}`)
                 .then(res=>{
                     topThis.setState({options: res.data});
                 })
