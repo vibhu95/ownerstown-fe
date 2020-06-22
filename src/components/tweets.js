@@ -85,7 +85,7 @@ class Tweets extends React.Component{
                                         multiple={false}
                                         onInputChange={this.getUsers}
                                         onChange={(a)=>this.setState({selected:a, user:a})}
-                                        placeholder="Choose any option..."
+                                        placeholder="Enter Name to search account (like 'Vibhuti Narayan') or hashtag with # (like '#HappyFathersDay2020')"
                                         selected={this.state.selected}
                                         options={this.state.options}
                                     />
