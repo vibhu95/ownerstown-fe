@@ -19,7 +19,7 @@
   "author": "Vibhuti Narayan",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "crypto": "^1.0.1",
     "fetch": "^1.1.0",
